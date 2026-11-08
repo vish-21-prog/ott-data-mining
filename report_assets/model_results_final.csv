@@ -1,0 +1,7 @@
+Model / Feature Set,Cutoff Date,ROC-AUC (95% CI),PR-AUC (95% CI),Incremental ROC Lift (C - B),Incremental PR Lift (C - B),PR-AUC Baseline
+"Model A (Listening Only, 7 features)",20170228 (1-Mo Gap),"0.6316 [0.6235, 0.6393]","0.1599 [0.1523, 0.1683]",N/A,N/A,0.0876 (8.76%)
+"Model B (Subscription Only, 7 features)",20170228 (1-Mo Gap),"0.8816 [0.8766, 0.8867]","0.5964 [0.5838, 0.6104]",N/A,N/A,0.0876 (8.76%)
+"Model C (Combined Features, 14 features)",20170228 (1-Mo Gap),"0.8843 [0.8792, 0.8893]","0.6125 [0.5995, 0.6265]","+0.0027 [+0.0010, +0.0043] (100% win)","+0.0160 [+0.0125, +0.0197] (100% win)",0.0876 (8.76%)
+"Model A (Listening Only, 7 features)",20170131 (2-Mo Gap),"0.6316 [0.6235, 0.6393]","0.1599 [0.1523, 0.1683]",N/A,N/A,0.0876 (8.76%)
+"Model B (Subscription Only, 7 features)",20170131 (2-Mo Gap),"0.8461 [0.8406, 0.8522]","0.4923 [0.4790, 0.5075]",N/A,N/A,0.0876 (8.76%)
+"Model C (Combined Features, 14 features)",20170131 (2-Mo Gap),"0.8531 [0.8472, 0.8589]","0.5117 [0.4978, 0.5276]","+0.0070 [+0.0049, +0.0090] (100% win)","+0.0194 [+0.0155, +0.0237] (100% win)",0.0876 (8.76%)

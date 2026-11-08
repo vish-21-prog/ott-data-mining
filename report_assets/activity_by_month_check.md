@@ -1,0 +1,26 @@
+|   Calendar Month | Subscriber Segment   | Auto-Renew Status   |   Total Subscribers (n) |   Users with >=1 Active Day (n) |   Active Day Share (%) |   Mean Active Days (zeros included) |
+|-----------------:|:---------------------|:--------------------|------------------------:|--------------------------------:|-----------------------:|------------------------------------:|
+|           201609 | Non-Churned          | All (Overall Group) |                  268191 |                          216632 |                  80.78 |                               12.94 |
+|           201609 | Churned              | All (Overall Group) |                   25745 |                           19665 |                  76.38 |                               13.47 |
+|           201610 | Non-Churned          | All (Overall Group) |                  268191 |                          217898 |                  81.25 |                               13.82 |
+|           201610 | Churned              | All (Overall Group) |                   25745 |                           19820 |                  76.99 |                               14.42 |
+|           201611 | Non-Churned          | All (Overall Group) |                  268191 |                          217298 |                  81.02 |                               13.55 |
+|           201611 | Churned              | All (Overall Group) |                   25745 |                           20103 |                  78.09 |                               14.09 |
+|           201612 | Non-Churned          | All (Overall Group) |                  268191 |                          220897 |                  82.37 |                               14.24 |
+|           201612 | Churned              | All (Overall Group) |                   25745 |                           20607 |                  80.04 |                               14.9  |
+|           201701 | Non-Churned          | All (Overall Group) |                  268191 |                          222963 |                  83.14 |                               14.12 |
+|           201701 | Churned              | All (Overall Group) |                   25745 |                           21029 |                  81.68 |                               14.82 |
+|           201702 | Non-Churned          | All (Overall Group) |                  268191 |                          222299 |                  82.89 |                               12.66 |
+|           201702 | Churned              | All (Overall Group) |                   25745 |                           22656 |                  88    |                               13.73 |
+|           201701 | Non-Churned          | is_auto_renew = 0   |                   25778 |                           23911 |                  92.76 |                               19.61 |
+|           201701 | Churned              | is_auto_renew = 0   |                   15681 |                           13311 |                  84.89 |                               16.57 |
+|           201701 | Non-Churned          | is_auto_renew = 1   |                  242348 |                          199052 |                  82.13 |                               13.54 |
+|           201701 | Churned              | is_auto_renew = 1   |                    9886 |                            7715 |                  78.04 |                               12.32 |
+|           201702 | Non-Churned          | is_auto_renew = 0   |                   25778 |                           25652 |                  99.51 |                               18.69 |
+|           201702 | Churned              | is_auto_renew = 0   |                   15681 |                           15206 |                  96.97 |                               16.1  |
+|           201702 | Non-Churned          | is_auto_renew = 1   |                  242348 |                          196646 |                  81.14 |                               12.02 |
+|           201702 | Churned              | is_auto_renew = 1   |                    9886 |                            7446 |                  75.32 |                               10.22 |
+
+### Zero-Activity in All 6 Months (201609 to 201702)
+- **Non-Churned Subscribers**: 21,807 of 268,191 (8.13%)
+- **Churned Subscribers**: 1,322 of 25,745 (5.13%)

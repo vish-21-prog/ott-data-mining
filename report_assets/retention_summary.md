@@ -1,0 +1,6 @@
+| Post-Reg Month (k)   |   Average Active Retention (%) |   Mature Cohorts Contributing | Theoretical Eligible Cohorts    | Retention Range across Cohorts (%)   |
+|:---------------------|-------------------------------:|------------------------------:|:--------------------------------|:-------------------------------------|
+| k = 1                |                          83.63 |                            26 | 26 cohorts (reg_idx + 1 <= 26)  | [74.52%, 93.75%]                     |
+| k = 3                |                          79.49 |                            24 | 24 cohorts (reg_idx + 3 <= 26)  | [71.01%, 89.36%]                     |
+| k = 6                |                          78.51 |                            21 | 21 cohorts (reg_idx + 6 <= 26)  | [70.26%, 89.35%]                     |
+| k = 12               |                          79.09 |                            15 | 15 cohorts (reg_idx + 12 <= 26) | [72.15%, 82.43%]                     |

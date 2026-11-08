@@ -1,0 +1,108 @@
+=================================================================
+[NOTICE: OUTDATED HISTORICAL RUN - SUPERSEDED BY FINAL MODEL C]
+This file contains historical bootstrap evaluation metrics from an earlier run.
+The final production Model C artifact is model_c_unweighted.joblib:
+  Retrained at:       2025-10-25 19:06:00
+  scikit-learn:       1.8.0
+  Train split:        234,954 subscribers (random_state 42)
+  Test split:         58,739 subscribers
+  Holdout ROC-AUC:    0.8869
+  Holdout PR-AUC:     0.6069
+  Holdout Brier:      0.0506
+  Holdout Precision:  0.7739
+  Holdout Recall:     0.3869
+  Holdout F1-Score:   0.5158 (at threshold 0.50)
+The values below are preserved solely for audit history.
+=================================================================
+
+=================================================================
+EVALUATE_MODELS: STATISTICAL BOOTSTRAP, CALIBRATION & IMPORTANCE
+Working Directory: E:\ott video paltform
+=================================================================
+
+Loading train_v2 and members_v3 metadata...
+Eligible mature cohort users (201501 <= reg_month <= 201608): 293,936
+Computing 6-month listening features (201609 to 201702)...
+Loading subscription features from user_features_v3.csv...
+-----------------------------------------------------------------
+TEST SET PR-AUC BASELINE (Empirical Churn Rate): 0.0876 (8.76%)
+-----------------------------------------------------------------
+
+Falling back to sklearn.ensemble.HistGradientBoostingClassifier.
+Re-training Models A, B, and C with identical parameters...
+
+--- FULL TEST SET POINT ESTIMATES ---
+Model A : ROC-AUC = 0.6316 | PR-AUC = 0.1599 | Brier Score = 0.2327
+Model B : ROC-AUC = 0.8816 | PR-AUC = 0.5964 | Brier Score = 0.1229
+Model C : ROC-AUC = 0.8843 | PR-AUC = 0.6125 | Brier Score = 0.1186
+
+Running Paired Bootstrap (1,000 resamples, seed=42)...
+Completed bootstrap in 45.6 s.
+
+=================================================================
+BOOTSTRAP 95% CONFIDENCE INTERVALS (1,000 Resamples)
+=================================================================
+Model A  ROC-AUC: 0.6316 (95% CI: [0.6235, 0.6393])
+Model A  PR-AUC:  0.1601 (95% CI: [0.1523, 0.1683])
+
+Model B  ROC-AUC: 0.8816 (95% CI: [0.8766, 0.8867])
+Model B  PR-AUC:  0.5964 (95% CI: [0.5838, 0.6104])
+
+Model C  ROC-AUC: 0.8843 (95% CI: [0.8792, 0.8893])
+Model C  PR-AUC:  0.6124 (95% CI: [0.5995, 0.6265])
+
+--- PAIRED DIFFERENCE (MODEL C minus MODEL B) ---
+ROC-AUC Difference (C - B): +0.0027 (95% CI: [+0.0010, +0.0043])
+Share of resamples where Model C > Model B (ROC-AUC): 100.00%
+
+PR-AUC Difference (C - B):  +0.0160 (95% CI: [+0.0125, +0.0197])
+Share of resamples where Model C > Model B (PR-AUC):  100.00%
+
+=================================================================
+CALIBRATION ANALYSIS & BRIER SCORES
+=================================================================
+Brier Scores (Lower is Better):
+   Model A : 0.23266
+   Model B : 0.12291
+   Model C : 0.11856
+
+Bin          | Count (n)  | Mean Pred Prob   | Actual Churn Rate  | Gap (Pred - Actual) 
+------------------------------------------------------------------------------------
+0.0-0.1      |      3,892 |           0.0868 |             0.0085 |              +0.0783
+0.1-0.2      |     21,677 |           0.1326 |             0.0120 |              +0.1206
+0.2-0.3      |     12,115 |           0.2530 |             0.0326 |              +0.2204
+0.3-0.4      |      7,547 |           0.3457 |             0.0497 |              +0.2960
+0.4-0.5      |      3,045 |           0.4426 |             0.0824 |              +0.3602
+0.5-0.6      |      1,541 |           0.5557 |             0.1291 |              +0.4266
+0.6-0.7      |      1,593 |           0.6656 |             0.1620 |              +0.5036
+0.7-0.8      |      3,118 |           0.7441 |             0.2181 |              +0.5260
+0.8-0.9      |      1,572 |           0.8489 |             0.4033 |              +0.4456
+0.9-1.0      |      2,688 |           0.9617 |             0.7675 |              +0.1942
+
+Saved Calibration Plot: calibration_plot.png
+
+=================================================================
+PERMUTATION IMPORTANCE: MODEL C (Test Set, 5 Repeats)
+=================================================================
+Evaluating 14 features across 5 repeats on test set...
+
+--- TOP 10 FEATURES BY TEST ROC-AUC DROP ---
+Rank  | Feature                | Type          | Mean AUC Drop  | Std Dev   
+------------------------------------------------------------------------
+1     | is_auto_renew          | Subscription  |        0.11073 |    0.00090
+2     | tx_count               | Subscription  |        0.03906 |    0.00176
+3     | actual_amount_paid     | Subscription  |        0.03874 |    0.00112
+4     | is_cancel              | Subscription  |        0.03106 |    0.00016
+5     | cancel_count           | Subscription  |        0.01075 |    0.00040
+6     | mean_active_days       | Listening     |        0.00447 |    0.00041
+7     | payment_plan_days      | Subscription  |        0.00427 |    0.00024
+8     | zero_months            | Listening     |        0.00332 |    0.00028
+9     | mean_total_secs        | Listening     |        0.00254 |    0.00036
+10    | slope_active_days      | Listening     |        0.00184 |    0.00027
+
+Saved Permutation Importance Plot: permutation_importance.png
+
+=================================================================
+EVALUATION COMPLETE IN 1.86 MINUTES
+Saved complete log to: evaluation_results.txt
+=================================================================

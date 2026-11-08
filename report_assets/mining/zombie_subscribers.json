@@ -1,0 +1,719 @@
+{
+  "metadata": {
+    "script": "zombie_subscribers.py",
+    "scope": "Demo sample (50,000 subscribers in users.db, 41.25% churn)",
+    "config": {
+      "zombie_is_auto_renew": 1.0,
+      "zombie_zero_months_min": 3,
+      "isolation_forest_contamination": 0.05,
+      "apriori_min_support": 0.03,
+      "apriori_min_confidence": 0.2
+    },
+    "generated_at": "2026-10-26 14:51:49"
+  },
+  "zombie_summary": {
+    "total_subscribers": 50000,
+    "zombie_count": 9831,
+    "zombie_pct": 19.66,
+    "revenue_at_risk_ntd": 1110966.0,
+    "payments_from_zombies_ntd": 1110966.0,
+    "revenue_label": "Payments from zombie subscribers (NT$)",
+    "actual_amount_paid_definition": "Sum of actual_amount_paid across identified zombie subscribers from their latest recorded transaction in users.db",
+    "zombie_churn_rate_pct": 22.27,
+    "all_auto_renew_churn_rate_pct": 21.15,
+    "churn_diff_percentage_points": 1.12,
+    "risk_comparison_statement": "Zombies churn at 22.27% vs 21.15% for all auto-renew subscribers (+1.12 pp difference)."
+  },
+  "anomaly_summary": {
+    "anomaly_count": 2500,
+    "contamination_setting": 0.05,
+    "overlap_table": {
+      "rule_yes_anomaly_yes": 248,
+      "rule_yes_anomaly_no": 9583,
+      "rule_no_anomaly_yes": 2252,
+      "rule_no_anomaly_no": 37917,
+      "overlap_pct_of_zombies": 2.52
+    }
+  },
+  "association_rules": [
+    {
+      "antecedents": [
+        "Plan: Long (>90d)"
+      ],
+      "consequents": [
+        "Outcome: Churned"
+      ],
+      "support": 0.0726,
+      "confidence": 0.9766,
+      "lift": 2.3673
+    },
+    {
+      "antecedents": [
+        "Billing: Manual",
+        "Plan: Long (>90d)"
+      ],
+      "consequents": [
+        "Outcome: Churned"
+      ],
+      "support": 0.0726,
+      "confidence": 0.9766,
+      "lift": 2.3673
+    },
+    {
+      "antecedents": [
+        "Plan: Long (>90d)",
+        "Listening: Active (>=15d)"
+      ],
+      "consequents": [
+        "Outcome: Churned"
+      ],
+      "support": 0.0501,
+      "confidence": 0.9747,
+      "lift": 2.3627
+    },
+    {
+      "antecedents": [
+        "Billing: Manual",
+        "Plan: Long (>90d)",
+        "Listening: Active (>=15d)"
+      ],
+      "consequents": [
+        "Outcome: Churned"
+      ],
+      "support": 0.0501,
+      "confidence": 0.9747,
+      "lift": 2.3627
+    },
+    {
+      "antecedents": [
+        "Billing: Manual",
+        "ZeroMonths: High (>=3m)"
+      ],
+      "consequents": [
+        "Outcome: Churned"
+      ],
+      "support": 0.0966,
+      "confidence": 0.8727,
+      "lift": 2.1154
+    },
+    {
+      "antecedents": [
+        "Billing: Manual",
+        "Amount: Standard (149 NTD)",
+        "ZeroMonths: High (>=3m)"
+      ],
+      "consequents": [
+        "Outcome: Churned"
+      ],
+      "support": 0.0513,
+      "confidence": 0.8664,
+      "lift": 2.1
+    },
+    {
+      "antecedents": [
+        "Billing: Manual",
+        "Plan: Short (<=30d)",
+        "Amount: Standard (149 NTD)",
+        "ZeroMonths: High (>=3m)"
+      ],
+      "consequents": [
+        "Outcome: Churned"
+      ],
+      "support": 0.0513,
+      "confidence": 0.8664,
+      "lift": 2.1
+    },
+    {
+      "antecedents": [
+        "Billing: Manual",
+        "Plan: Short (<=30d)",
+        "ZeroMonths: High (>=3m)"
+      ],
+      "consequents": [
+        "Outcome: Churned"
+      ],
+      "support": 0.0826,
+      "confidence": 0.8601,
+      "lift": 2.0849
+    },
+    {
+      "antecedents": [
+        "Billing: Manual"
+      ],
+      "consequents": [
+        "Outcome: Churned"
+      ],
+      "support": 0.2707,
+      "confidence": 0.8221,
+      "lift": 1.9927
+    },
+    {
+      "antecedents": [
+        "Billing: Manual",
+        "Listening: Active (>=15d)"
+      ],
+      "consequents": [
+        "Outcome: Churned"
+      ],
+      "support": 0.1106,
+      "confidence": 0.7761,
+      "lift": 1.8814
+    },
+    {
+      "antecedents": [
+        "Billing: Manual",
+        "Amount: Standard (149 NTD)"
+      ],
+      "consequents": [
+        "Outcome: Churned"
+      ],
+      "support": 0.1136,
+      "confidence": 0.7663,
+      "lift": 1.8574
+    },
+    {
+      "antecedents": [
+        "Billing: Manual",
+        "Plan: Short (<=30d)",
+        "Amount: Standard (149 NTD)"
+      ],
+      "consequents": [
+        "Outcome: Churned"
+      ],
+      "support": 0.1136,
+      "confidence": 0.7663,
+      "lift": 1.8574
+    },
+    {
+      "antecedents": [
+        "Billing: Manual",
+        "Plan: Short (<=30d)"
+      ],
+      "consequents": [
+        "Outcome: Churned"
+      ],
+      "support": 0.1819,
+      "confidence": 0.7657,
+      "lift": 1.8562
+    },
+    {
+      "antecedents": [
+        "Amount: Standard (149 NTD)",
+        "ZeroMonths: High (>=3m)"
+      ],
+      "consequents": [
+        "Outcome: Churned"
+      ],
+      "support": 0.0625,
+      "confidence": 0.7073,
+      "lift": 1.7145
+    },
+    {
+      "antecedents": [
+        "Plan: Short (<=30d)",
+        "Amount: Standard (149 NTD)",
+        "ZeroMonths: High (>=3m)"
+      ],
+      "consequents": [
+        "Outcome: Churned"
+      ],
+      "support": 0.0625,
+      "confidence": 0.7073,
+      "lift": 1.7145
+    },
+    {
+      "antecedents": [
+        "Billing: Manual",
+        "Amount: Standard (149 NTD)",
+        "Listening: Active (>=15d)"
+      ],
+      "consequents": [
+        "Outcome: Churned"
+      ],
+      "support": 0.0375,
+      "confidence": 0.6545,
+      "lift": 1.5864
+    },
+    {
+      "antecedents": [
+        "Billing: Manual",
+        "Plan: Short (<=30d)",
+        "Amount: Standard (149 NTD)",
+        "Listening: Active (>=15d)"
+      ],
+      "consequents": [
+        "Outcome: Churned"
+      ],
+      "support": 0.0375,
+      "confidence": 0.6545,
+      "lift": 1.5864
+    },
+    {
+      "antecedents": [
+        "Billing: Manual",
+        "Plan: Short (<=30d)",
+        "Listening: Active (>=15d)"
+      ],
+      "consequents": [
+        "Outcome: Churned"
+      ],
+      "support": 0.0567,
+      "confidence": 0.6528,
+      "lift": 1.5823
+    },
+    {
+      "antecedents": [
+        "Plan: Short (<=30d)",
+        "Billing: Auto-Renew",
+        "Amount: Low (<=100 NTD)",
+        "Listening: Active (>=15d)"
+      ],
+      "consequents": [
+        "Outcome: Retained"
+      ],
+      "support": 0.1072,
+      "confidence": 0.861,
+      "lift": 1.4657
+    },
+    {
+      "antecedents": [
+        "Billing: Auto-Renew",
+        "Amount: Low (<=100 NTD)",
+        "Listening: Active (>=15d)"
+      ],
+      "consequents": [
+        "Outcome: Retained"
+      ],
+      "support": 0.1072,
+      "confidence": 0.861,
+      "lift": 1.4657
+    },
+    {
+      "antecedents": [
+        "Plan: Short (<=30d)",
+        "Amount: Low (<=100 NTD)",
+        "Listening: Active (>=15d)"
+      ],
+      "consequents": [
+        "Outcome: Retained"
+      ],
+      "support": 0.1074,
+      "confidence": 0.8485,
+      "lift": 1.4443
+    },
+    {
+      "antecedents": [
+        "Amount: Low (<=100 NTD)",
+        "Listening: Active (>=15d)"
+      ],
+      "consequents": [
+        "Outcome: Retained"
+      ],
+      "support": 0.1074,
+      "confidence": 0.846,
+      "lift": 1.4402
+    },
+    {
+      "antecedents": [
+        "Billing: Auto-Renew",
+        "Amount: Low (<=100 NTD)"
+      ],
+      "consequents": [
+        "Outcome: Retained"
+      ],
+      "support": 0.3543,
+      "confidence": 0.8438,
+      "lift": 1.4363
+    },
+    {
+      "antecedents": [
+        "Plan: Short (<=30d)",
+        "Billing: Auto-Renew",
+        "Amount: Low (<=100 NTD)"
+      ],
+      "consequents": [
+        "Outcome: Retained"
+      ],
+      "support": 0.3543,
+      "confidence": 0.8438,
+      "lift": 1.4363
+    },
+    {
+      "antecedents": [
+        "Plan: Short (<=30d)",
+        "Billing: Auto-Renew",
+        "Amount: Low (<=100 NTD)",
+        "ZeroMonths: High (>=3m)"
+      ],
+      "consequents": [
+        "Outcome: Retained"
+      ],
+      "support": 0.1211,
+      "confidence": 0.8385,
+      "lift": 1.4274
+    },
+    {
+      "antecedents": [
+        "Billing: Auto-Renew",
+        "Amount: Low (<=100 NTD)",
+        "ZeroMonths: High (>=3m)"
+      ],
+      "consequents": [
+        "Outcome: Retained"
+      ],
+      "support": 0.1211,
+      "confidence": 0.8385,
+      "lift": 1.4274
+    },
+    {
+      "antecedents": [
+        "Plan: Short (<=30d)",
+        "Amount: Low (<=100 NTD)"
+      ],
+      "consequents": [
+        "Outcome: Retained"
+      ],
+      "support": 0.3546,
+      "confidence": 0.832,
+      "lift": 1.4163
+    },
+    {
+      "antecedents": [
+        "Amount: Low (<=100 NTD)"
+      ],
+      "consequents": [
+        "Outcome: Retained"
+      ],
+      "support": 0.3547,
+      "confidence": 0.8287,
+      "lift": 1.4106
+    },
+    {
+      "antecedents": [
+        "Plan: Short (<=30d)",
+        "Amount: Low (<=100 NTD)",
+        "ZeroMonths: High (>=3m)"
+      ],
+      "consequents": [
+        "Outcome: Retained"
+      ],
+      "support": 0.1212,
+      "confidence": 0.8219,
+      "lift": 1.3991
+    },
+    {
+      "antecedents": [
+        "Amount: Low (<=100 NTD)",
+        "ZeroMonths: High (>=3m)"
+      ],
+      "consequents": [
+        "Outcome: Retained"
+      ],
+      "support": 0.1213,
+      "confidence": 0.8158,
+      "lift": 1.3887
+    }
+  ],
+  "top_anomalies": [
+    {
+      "msno": "BwHyfPMY4H6fVQ4gogJv0cgX4hSy9T0otmYrqtgikrA=",
+      "short_id": "BwHyfPMY\u2026",
+      "anomaly_score": -0.1169,
+      "profile": "Fast decay",
+      "mean_active_days": 7.17,
+      "zero_months": 4,
+      "is_auto_renew": 0,
+      "payment_plan_days": 410,
+      "actual_amount_paid": 1788.0,
+      "is_churn": 1,
+      "reasons": [
+        "Outlier payment volume: NT$ 1788"
+      ]
+    },
+    {
+      "msno": "/+NEUk1t2vBJTxt1yz82wxMtWU3D5WUxnIHrsVTuwf0=",
+      "short_id": "/+NEUk1t\u2026",
+      "anomaly_score": -0.1159,
+      "profile": "Fast decay",
+      "mean_active_days": 10.67,
+      "zero_months": 2,
+      "is_auto_renew": 0,
+      "payment_plan_days": 450,
+      "actual_amount_paid": 1788.0,
+      "is_churn": 1,
+      "reasons": [
+        "Outlier payment volume: NT$ 1788"
+      ]
+    },
+    {
+      "msno": "z2J+j6KGWs90O19ulQreve4AWmmiZPI1IJv5UNhH6U8=",
+      "short_id": "z2J+j6KG\u2026",
+      "anomaly_score": -0.1129,
+      "profile": "Fast decay",
+      "mean_active_days": 8.17,
+      "zero_months": 3,
+      "is_auto_renew": 0,
+      "payment_plan_days": 410,
+      "actual_amount_paid": 1788.0,
+      "is_churn": 1,
+      "reasons": [
+        "Outlier payment volume: NT$ 1788"
+      ]
+    },
+    {
+      "msno": "I2DC5FHoPv9T6lAXJ2xou/acWflt/mGAGOpNWUjhBQs=",
+      "short_id": "I2DC5FHo\u2026",
+      "anomaly_score": -0.112,
+      "profile": "Fast decay",
+      "mean_active_days": 7.67,
+      "zero_months": 3,
+      "is_auto_renew": 0,
+      "payment_plan_days": 410,
+      "actual_amount_paid": 1788.0,
+      "is_churn": 1,
+      "reasons": [
+        "Outlier payment volume: NT$ 1788"
+      ]
+    },
+    {
+      "msno": "OqETX8OEXC9BFAxoIHHf5dOcfLJPsgOpYWjQ/lIa7Fg=",
+      "short_id": "OqETX8OE\u2026",
+      "anomaly_score": -0.1107,
+      "profile": "Inactive",
+      "mean_active_days": 0.0,
+      "zero_months": 6,
+      "is_auto_renew": 0,
+      "payment_plan_days": 410,
+      "actual_amount_paid": 1788.0,
+      "is_churn": 1,
+      "reasons": [
+        "Outlier payment volume: NT$ 1788"
+      ]
+    },
+    {
+      "msno": "DgLnSHakmyl86sIuxCAW+h31ZGchp/pxvK9g+vV6SRo=",
+      "short_id": "DgLnSHak\u2026",
+      "anomaly_score": -0.1093,
+      "profile": "Fast decay",
+      "mean_active_days": 9.5,
+      "zero_months": 1,
+      "is_auto_renew": 0,
+      "payment_plan_days": 410,
+      "actual_amount_paid": 1788.0,
+      "is_churn": 1,
+      "reasons": [
+        "Outlier payment volume: NT$ 1788"
+      ]
+    },
+    {
+      "msno": "sgQJvtIhwt4Pos9XF9X4VwfjlXBipE5+FFGvdwcdw3s=",
+      "short_id": "sgQJvtIh\u2026",
+      "anomaly_score": -0.1089,
+      "profile": "Inactive",
+      "mean_active_days": 0.0,
+      "zero_months": 6,
+      "is_auto_renew": 0,
+      "payment_plan_days": 410,
+      "actual_amount_paid": 1788.0,
+      "is_churn": 1,
+      "reasons": [
+        "Outlier payment volume: NT$ 1788"
+      ]
+    },
+    {
+      "msno": "13O2S1E3e3uoLC612l95vUNGJb5JaHNymfH0/N8x3aY=",
+      "short_id": "13O2S1E3\u2026",
+      "anomaly_score": -0.1084,
+      "profile": "Fast decay",
+      "mean_active_days": 16.67,
+      "zero_months": 0,
+      "is_auto_renew": 0,
+      "payment_plan_days": 410,
+      "actual_amount_paid": 1788.0,
+      "is_churn": 1,
+      "reasons": [
+        "Outlier payment volume: NT$ 1788"
+      ]
+    },
+    {
+      "msno": "D20jI0bH7BLvu0KMlT7rwRNRrHrbVlargT91OE/KpeY=",
+      "short_id": "D20jI0bH\u2026",
+      "anomaly_score": -0.1064,
+      "profile": "Fast decay",
+      "mean_active_days": 5.17,
+      "zero_months": 2,
+      "is_auto_renew": 0,
+      "payment_plan_days": 410,
+      "actual_amount_paid": 1788.0,
+      "is_churn": 1,
+      "reasons": [
+        "Outlier payment volume: NT$ 1788"
+      ]
+    },
+    {
+      "msno": "09JLuuREESkP5N09Thxg9qZ/Yu8ldmr7GPrluD5p4eE=",
+      "short_id": "09JLuuRE\u2026",
+      "anomaly_score": -0.1061,
+      "profile": "Fast decay",
+      "mean_active_days": 12.0,
+      "zero_months": 3,
+      "is_auto_renew": 0,
+      "payment_plan_days": 195,
+      "actual_amount_paid": 894.0,
+      "is_churn": 1,
+      "reasons": [
+        "Outlier payment volume: NT$ 894"
+      ]
+    },
+    {
+      "msno": "2DZCbXUctod05GxgW3OXs595Kmaf3orWz6X1frGk6r0=",
+      "short_id": "2DZCbXUc\u2026",
+      "anomaly_score": -0.1047,
+      "profile": "Inactive",
+      "mean_active_days": 0.0,
+      "zero_months": 6,
+      "is_auto_renew": 0,
+      "payment_plan_days": 410,
+      "actual_amount_paid": 1788.0,
+      "is_churn": 1,
+      "reasons": [
+        "Outlier payment volume: NT$ 1788"
+      ]
+    },
+    {
+      "msno": "pQhLzxwV/gAzvn4on04SnoQ7SNonwQQVpKhsqVmOVrA=",
+      "short_id": "pQhLzxwV\u2026",
+      "anomaly_score": -0.1045,
+      "profile": "Fast decay",
+      "mean_active_days": 6.83,
+      "zero_months": 1,
+      "is_auto_renew": 0,
+      "payment_plan_days": 410,
+      "actual_amount_paid": 1788.0,
+      "is_churn": 1,
+      "reasons": [
+        "Outlier payment volume: NT$ 1788"
+      ]
+    },
+    {
+      "msno": "CdIZkieF5s/D1/8ULsUrzw8TTGdzDyOnS8nSQp7wBB8=",
+      "short_id": "CdIZkieF\u2026",
+      "anomaly_score": -0.1033,
+      "profile": "Growing",
+      "mean_active_days": 16.5,
+      "zero_months": 0,
+      "is_auto_renew": 0,
+      "payment_plan_days": 410,
+      "actual_amount_paid": 1788.0,
+      "is_churn": 1,
+      "reasons": [
+        "Outlier payment volume: NT$ 1788"
+      ]
+    },
+    {
+      "msno": "r2eZKMln3JmFL9BE2AduBiPVgWBlmE+GavsqBtSVsQ8=",
+      "short_id": "r2eZKMln\u2026",
+      "anomaly_score": -0.1028,
+      "profile": "Fast decay",
+      "mean_active_days": 5.17,
+      "zero_months": 4,
+      "is_auto_renew": 0,
+      "payment_plan_days": 410,
+      "actual_amount_paid": 1788.0,
+      "is_churn": 1,
+      "reasons": [
+        "Outlier payment volume: NT$ 1788"
+      ]
+    },
+    {
+      "msno": "RHkCBgY8edAnVBQffTmGpsZm6rouC1FS8Sx1aFLSkDE=",
+      "short_id": "RHkCBgY8\u2026",
+      "anomaly_score": -0.1028,
+      "profile": "Fast decay",
+      "mean_active_days": 3.67,
+      "zero_months": 5,
+      "is_auto_renew": 0,
+      "payment_plan_days": 410,
+      "actual_amount_paid": 1788.0,
+      "is_churn": 1,
+      "reasons": [
+        "Outlier payment volume: NT$ 1788"
+      ]
+    },
+    {
+      "msno": "/rprLJMTkEJNGb1O6eYitGMdrmSo6Wl+yxv5zIFeYU0=",
+      "short_id": "/rprLJMT\u2026",
+      "anomaly_score": -0.1007,
+      "profile": "Fast decay",
+      "mean_active_days": 4.67,
+      "zero_months": 3,
+      "is_auto_renew": 0,
+      "payment_plan_days": 410,
+      "actual_amount_paid": 1788.0,
+      "is_churn": 1,
+      "reasons": [
+        "Outlier payment volume: NT$ 1788"
+      ]
+    },
+    {
+      "msno": "d2zh/cXOtnJDsdCZoArAhPFesujTV+gfKKNjIul2WH0=",
+      "short_id": "d2zh/cXO\u2026",
+      "anomaly_score": -0.0988,
+      "profile": "Fast decay",
+      "mean_active_days": 10.17,
+      "zero_months": 0,
+      "is_auto_renew": 0,
+      "payment_plan_days": 410,
+      "actual_amount_paid": 1788.0,
+      "is_churn": 1,
+      "reasons": [
+        "Outlier payment volume: NT$ 1788"
+      ]
+    },
+    {
+      "msno": "GVU6mNyt6RZEH07oNFfBtV9oqfcj8z3e4qUDpNNZ2t4=",
+      "short_id": "GVU6mNyt\u2026",
+      "anomaly_score": -0.0982,
+      "profile": "Fast decay",
+      "mean_active_days": 4.17,
+      "zero_months": 1,
+      "is_auto_renew": 0,
+      "payment_plan_days": 410,
+      "actual_amount_paid": 1788.0,
+      "is_churn": 1,
+      "reasons": [
+        "Outlier payment volume: NT$ 1788"
+      ]
+    },
+    {
+      "msno": "skrUYguKVutkJaVakkDsKtN5MjPF5sWbhe6ifekLU/k=",
+      "short_id": "skrUYguK\u2026",
+      "anomaly_score": -0.0979,
+      "profile": "Inactive",
+      "mean_active_days": 0.0,
+      "zero_months": 6,
+      "is_auto_renew": 0,
+      "payment_plan_days": 410,
+      "actual_amount_paid": 1788.0,
+      "is_churn": 1,
+      "reasons": [
+        "Outlier payment volume: NT$ 1788"
+      ]
+    },
+    {
+      "msno": "ZLu5IUYbFNeBSn0QQG+4469KHGOtlfepfWQi6Xileoo=",
+      "short_id": "ZLu5IUYb\u2026",
+      "anomaly_score": -0.0979,
+      "profile": "Inactive",
+      "mean_active_days": 0.0,
+      "zero_months": 6,
+      "is_auto_renew": 0,
+      "payment_plan_days": 410,
+      "actual_amount_paid": 1788.0,
+      "is_churn": 1,
+      "reasons": [
+        "Outlier payment volume: NT$ 1788"
+      ]
+    }
+  ]
+}

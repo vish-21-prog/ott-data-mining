@@ -1,0 +1,6 @@
+Population Base,Subscriber Group,Total Users (n),Churn Count,Churn Rate (%),95% Wilson CI,Transaction Population Scope,Known Transactions (n),Auto-Renew = 1 Share (%)
+"Total Training Users (train_v2.csv, N=970,960)",Subscribers with No Listening Rows (Any Month 201501-201703),115800,6400,5.53,"[5.40%, 5.66%]","N/A (Across all 970,960 train_v2 subscribers)",N/A,N/A
+"All Training Users with Registration Date (N=860,967)",No-Listening Subscribers (0 logs in Sep 16 - Feb 17),49333,5339,10.82,"[10.55%, 11.10%]","Cohort users registered 201501 to 201703, n=382,790",25750,99.32
+"All Training Users with Registration Date (N=860,967)",Active-Listening Subscribers (>=1 logs in Sep 16 - Feb 17),811634,76109,9.38,"[9.31%, 9.44%]","Cohort users registered 201501 to 201703, n=382,790",355441,84.41
+"No-Listening Users with Transaction History (N=25,750)",No-Listening: is_auto_renew = 0,176,143,81.25,"[74.84%, 86.33%]","Cohort users registered 201501 to 201703, n=382,790",176,0.0%
+"No-Listening Users with Transaction History (N=25,750)",No-Listening: is_auto_renew = 1,25574,1067,4.17,"[3.93%, 4.42%]","Cohort users registered 201501 to 201703, n=382,790",25574,100.0%

@@ -1,0 +1,6 @@
+Post-Reg Month (k),v2 Non-Churn Contributing Users (n),v2 Non-Churn Retention (%),v2 Churn Contributing Users (n),v2 Churn Retention (%),Old Non-Churn Contributing Users (n),Old Non-Churn Retention (%),Old Churn Contributing Users (n),Old Churn Retention (%)
+k = 0,268191,82.91,25745,69.64,268191,82.91,25745,69.64
+k = 1,268191,81.46,25745,65.58,268191,81.46,25745,65.58
+k = 3,268191,77.66,25745,57.08,268191,77.66,25745,57.08
+k = 6,268191,77.97,25745,49.12,268191,77.97,25745,49.12
+k = 12,181602,78.96,18167,33.16,197442,79.09,20610,33.22

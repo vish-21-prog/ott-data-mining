@@ -1,0 +1,5 @@
+Profile,Subscribers with Tx (n),Auto-Renew=0 Users (n),Auto-Renew=0 Share (%),Churn Rate (Auto-Renew=0) (%),95% CI (Auto-Renew=0),Churn Rate (Auto-Renew=1) (%),95% CI (Auto-Renew=1)
+Inactive,22896,149,0.65,83.22,"[76.40%, 88.37%]",4.52,"[4.26%, 4.80%]"
+Fast decay,94529,13197,13.96,39.36,"[38.53%, 40.19%]",4.43,"[4.29%, 4.58%]"
+Stable,97033,11664,12.02,37.35,"[36.48%, 38.24%]",3.6,"[3.48%, 3.73%]"
+Growing,79235,16449,20.76,36.51,"[35.78%, 37.25%]",3.46,"[3.32%, 3.61%]"

@@ -1,0 +1,5 @@
+Model Configuration,Features Included,ROC-AUC (Mean +/- Std),PR-AUC (Mean +/- Std),Paired ROC-AUC Diff (vs Baseline),Paired PR-AUC Diff (vs Baseline)
+Model A (Baseline),7 Listening,0.6249 +/- 0.0043,0.1551 +/- 0.0035,Baseline,Baseline
+Model A (+ Tenure),7 Listening + Tenure,0.6681 +/- 0.0045,0.1694 +/- 0.0043,+0.0432 +/- 0.0047,+0.0143 +/- 0.0015
+Model C (Baseline),14 Combined,0.8811 +/- 0.0029,0.6096 +/- 0.0048,Baseline,Baseline
+Model C (+ Tenure),14 Combined + Tenure,0.8893 +/- 0.0026,0.6141 +/- 0.0053,+0.0082 +/- 0.0010,+0.0045 +/- 0.0008

@@ -1,0 +1,7 @@
+Post-Reg Month (k),Non-Churn Contributing Users (n),Non-Churn Active Users (n),Non-Churn Retention (%),Churn Contributing Users (n),Churn Active Users (n),Churn Retention (%),Diff vs v2 Non-Churn (pp),Diff vs v2 Churn (pp),Status
+k = 0,268191,217783,81.20,25745,22018,85.52,1.71,15.88,FAIL (NC d=1.71, Ch d=15.88)
+k = 1,268191,221494,82.59,25745,19348,75.15,1.13,9.57,FAIL (NC d=1.13, Ch d=9.57)
+k = 3,268191,211767,78.96,25745,18415,71.53,1.30,14.45,FAIL (NC d=1.30, Ch d=14.45)
+k = 6,268191,212180,79.12,25745,18898,73.40,1.15,24.28,FAIL (NC d=1.15, Ch d=24.28)
+k = 12,181602,143834,79.20,18167,13849,76.23,0.24,43.07,FAIL (NC d=0.24, Ch d=43.07)
+k = 18,66547,53968,81.10,7675,6076,79.17,N/A,N/A,k=18 Checkpoint

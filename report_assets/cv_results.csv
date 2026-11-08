@@ -1,0 +1,4 @@
+Model / Feature Set,Validation Strategy,Weighting,Mean ROC-AUC,Std ROC-AUC,ROC-AUC (Mean +/- Std),Mean PR-AUC,Std PR-AUC,PR-AUC (Mean +/- Std)
+Model A (Listening Only),"5-Fold Stratified CV (Mature Cohort N=293,936)",Unweighted (Natural Prevalence),0.6249,0.0043,0.6249 +/- 0.0043,0.1551,0.0035,0.1551 +/- 0.0035
+Model B (Subscription Only),"5-Fold Stratified CV (Mature Cohort N=293,936)",Unweighted (Natural Prevalence),0.878,0.003,0.8780 +/- 0.0030,0.5916,0.0061,0.5916 +/- 0.0061
+Model C (Combined Features),"5-Fold Stratified CV (Mature Cohort N=293,936)",Unweighted (Natural Prevalence),0.8811,0.0029,0.8811 +/- 0.0029,0.6096,0.0048,0.6096 +/- 0.0048

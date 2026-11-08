@@ -1,0 +1,882 @@
+{
+  "metadata": {
+    "script": "targeting_curves.py",
+    "scope": "Full cohort test split (58,787 subscribers, 8.76% churn)",
+    "test_subscribers": 58739,
+    "test_churn_rate_pct": 8.7,
+    "mean_monthly_value_ntd": 143.76,
+    "assumptions_note": "Assumptions, not measured values",
+    "assumptions": {
+      "success_rate": 0.2,
+      "offer_cost_ntd": 20.0,
+      "retained_months": 6
+    },
+    "breakeven": {
+      "breakeven_offer_cost_ntd": 57.59,
+      "breakeven_success_rate": 0.0695,
+      "breakeven_success_rate_pct": 6.95
+    },
+    "generated_at": "2026-10-26 14:52:58"
+  },
+  "deciles": [
+    {
+      "decile": 1,
+      "target_fraction": 0.1,
+      "target_pct": 10.0,
+      "subscribers_targeted": 5873,
+      "churners_captured": 3030,
+      "gain_pct": 59.26,
+      "lift": 5.93,
+      "threshold_at_decile": 0.2104,
+      "baseline_gain_pct": 10.0,
+      "expected_gross_saved_ntd": 522725.62,
+      "campaign_cost_ntd": 117460.0,
+      "net_profit_ntd": 405265.62
+    },
+    {
+      "decile": 2,
+      "target_fraction": 0.2,
+      "target_pct": 20.0,
+      "subscribers_targeted": 11746,
+      "churners_captured": 3921,
+      "gain_pct": 76.69,
+      "lift": 3.83,
+      "threshold_at_decile": 0.0781,
+      "baseline_gain_pct": 20.0,
+      "expected_gross_saved_ntd": 676438.0,
+      "campaign_cost_ntd": 234920.0,
+      "net_profit_ntd": 441518.0
+    },
+    {
+      "decile": 3,
+      "target_fraction": 0.3,
+      "target_pct": 30.0,
+      "subscribers_targeted": 17619,
+      "churners_captured": 4311,
+      "gain_pct": 84.31,
+      "lift": 2.81,
+      "threshold_at_decile": 0.0493,
+      "baseline_gain_pct": 30.0,
+      "expected_gross_saved_ntd": 743719.52,
+      "campaign_cost_ntd": 352380.0,
+      "net_profit_ntd": 391339.52
+    },
+    {
+      "decile": 4,
+      "target_fraction": 0.4,
+      "target_pct": 40.0,
+      "subscribers_targeted": 23492,
+      "churners_captured": 4555,
+      "gain_pct": 89.09,
+      "lift": 2.23,
+      "threshold_at_decile": 0.0378,
+      "baseline_gain_pct": 40.0,
+      "expected_gross_saved_ntd": 785813.6,
+      "campaign_cost_ntd": 469840.0,
+      "net_profit_ntd": 315973.6
+    },
+    {
+      "decile": 5,
+      "target_fraction": 0.5,
+      "target_pct": 50.0,
+      "subscribers_targeted": 29365,
+      "churners_captured": 4746,
+      "gain_pct": 92.82,
+      "lift": 1.86,
+      "threshold_at_decile": 0.032,
+      "baseline_gain_pct": 50.0,
+      "expected_gross_saved_ntd": 818764.29,
+      "campaign_cost_ntd": 587300.0,
+      "net_profit_ntd": 231464.29
+    },
+    {
+      "decile": 6,
+      "target_fraction": 0.6,
+      "target_pct": 60.0,
+      "subscribers_targeted": 35238,
+      "churners_captured": 4889,
+      "gain_pct": 95.62,
+      "lift": 1.59,
+      "threshold_at_decile": 0.0197,
+      "baseline_gain_pct": 60.0,
+      "expected_gross_saved_ntd": 843434.18,
+      "campaign_cost_ntd": 704760.0,
+      "net_profit_ntd": 138674.18
+    },
+    {
+      "decile": 7,
+      "target_fraction": 0.7,
+      "target_pct": 70.0,
+      "subscribers_targeted": 41111,
+      "churners_captured": 4962,
+      "gain_pct": 97.05,
+      "lift": 1.39,
+      "threshold_at_decile": 0.0145,
+      "baseline_gain_pct": 70.0,
+      "expected_gross_saved_ntd": 856027.9,
+      "campaign_cost_ntd": 822220.0,
+      "net_profit_ntd": 33807.9
+    },
+    {
+      "decile": 8,
+      "target_fraction": 0.8,
+      "target_pct": 80.0,
+      "subscribers_targeted": 46984,
+      "churners_captured": 5028,
+      "gain_pct": 98.34,
+      "lift": 1.23,
+      "threshold_at_decile": 0.0124,
+      "baseline_gain_pct": 80.0,
+      "expected_gross_saved_ntd": 867414.0,
+      "campaign_cost_ntd": 939680.0,
+      "net_profit_ntd": -72266.0
+    },
+    {
+      "decile": 9,
+      "target_fraction": 0.9,
+      "target_pct": 90.0,
+      "subscribers_targeted": 52857,
+      "churners_captured": 5079,
+      "gain_pct": 99.34,
+      "lift": 1.1,
+      "threshold_at_decile": 0.0084,
+      "baseline_gain_pct": 90.0,
+      "expected_gross_saved_ntd": 876212.35,
+      "campaign_cost_ntd": 1057140.0,
+      "net_profit_ntd": -180927.65
+    },
+    {
+      "decile": 10,
+      "target_fraction": 1.0,
+      "target_pct": 100.0,
+      "subscribers_targeted": 58739,
+      "churners_captured": 5113,
+      "gain_pct": 100.0,
+      "lift": 1.0,
+      "threshold_at_decile": 0.0041,
+      "baseline_gain_pct": 100.0,
+      "expected_gross_saved_ntd": 882077.92,
+      "campaign_cost_ntd": 1174780.0,
+      "net_profit_ntd": -292702.08
+    }
+  ],
+  "fine_curve": [
+    {
+      "target_fraction": 0.0,
+      "gain_pct": 0.0,
+      "net_profit_ntd": 0.0,
+      "churners_captured": 0,
+      "subscribers_targeted": 0
+    },
+    {
+      "target_fraction": 0.01,
+      "gain_pct": 10.8,
+      "net_profit_ntd": 83489.22,
+      "churners_captured": 552,
+      "subscribers_targeted": 587
+    },
+    {
+      "target_fraction": 0.02,
+      "gain_pct": 20.83,
+      "net_profit_ntd": 160250.29,
+      "churners_captured": 1065,
+      "subscribers_targeted": 1174
+    },
+    {
+      "target_fraction": 0.03,
+      "gain_pct": 29.85,
+      "net_profit_ntd": 228040.49,
+      "churners_captured": 1526,
+      "subscribers_targeted": 1761
+    },
+    {
+      "target_fraction": 0.04,
+      "gain_pct": 36.61,
+      "net_profit_ntd": 275991.27,
+      "churners_captured": 1872,
+      "subscribers_targeted": 2348
+    },
+    {
+      "target_fraction": 0.05,
+      "gain_pct": 42.32,
+      "net_profit_ntd": 314626.15,
+      "churners_captured": 2164,
+      "subscribers_targeted": 2935
+    },
+    {
+      "target_fraction": 0.06,
+      "gain_pct": 46.65,
+      "net_profit_ntd": 341012.34,
+      "churners_captured": 2385,
+      "subscribers_targeted": 3522
+    },
+    {
+      "target_fraction": 0.07,
+      "gain_pct": 50.5,
+      "net_profit_ntd": 363258.14,
+      "churners_captured": 2582,
+      "subscribers_targeted": 4109
+    },
+    {
+      "target_fraction": 0.08,
+      "gain_pct": 53.88,
+      "net_profit_ntd": 381363.53,
+      "churners_captured": 2755,
+      "subscribers_targeted": 4696
+    },
+    {
+      "target_fraction": 0.09,
+      "gain_pct": 56.56,
+      "net_profit_ntd": 393258.31,
+      "churners_captured": 2892,
+      "subscribers_targeted": 5283
+    },
+    {
+      "target_fraction": 0.1,
+      "gain_pct": 59.24,
+      "net_profit_ntd": 405153.1,
+      "churners_captured": 3029,
+      "subscribers_targeted": 5870
+    },
+    {
+      "target_fraction": 0.11,
+      "gain_pct": 61.88,
+      "net_profit_ntd": 416702.86,
+      "churners_captured": 3164,
+      "subscribers_targeted": 6457
+    },
+    {
+      "target_fraction": 0.12,
+      "gain_pct": 64.44,
+      "net_profit_ntd": 427562.55,
+      "churners_captured": 3295,
+      "subscribers_targeted": 7044
+    },
+    {
+      "target_fraction": 0.13,
+      "gain_pct": 66.24,
+      "net_profit_ntd": 431694.08,
+      "churners_captured": 3387,
+      "subscribers_targeted": 7631
+    },
+    {
+      "target_fraction": 0.14,
+      "gain_pct": 68.18,
+      "net_profit_ntd": 437033.24,
+      "churners_captured": 3486,
+      "subscribers_targeted": 8218
+    },
+    {
+      "target_fraction": 0.15,
+      "gain_pct": 70.31,
+      "net_profit_ntd": 444097.56,
+      "churners_captured": 3595,
+      "subscribers_targeted": 8805
+    },
+    {
+      "target_fraction": 0.16,
+      "gain_pct": 72.23,
+      "net_profit_ntd": 449264.2,
+      "churners_captured": 3693,
+      "subscribers_targeted": 9392
+    },
+    {
+      "target_fraction": 0.17,
+      "gain_pct": 73.67,
+      "net_profit_ntd": 450290.43,
+      "churners_captured": 3767,
+      "subscribers_targeted": 9979
+    },
+    {
+      "target_fraction": 0.18,
+      "gain_pct": 74.91,
+      "net_profit_ntd": 449418.98,
+      "churners_captured": 3830,
+      "subscribers_targeted": 10566
+    },
+    {
+      "target_fraction": 0.19,
+      "gain_pct": 75.79,
+      "net_profit_ntd": 445442.24,
+      "churners_captured": 3875,
+      "subscribers_targeted": 11153
+    },
+    {
+      "target_fraction": 0.2,
+      "gain_pct": 76.69,
+      "net_profit_ntd": 441638.0,
+      "churners_captured": 3921,
+      "subscribers_targeted": 11740
+    },
+    {
+      "target_fraction": 0.21,
+      "gain_pct": 77.65,
+      "net_profit_ntd": 438351.32,
+      "churners_captured": 3970,
+      "subscribers_targeted": 12327
+    },
+    {
+      "target_fraction": 0.22,
+      "gain_pct": 78.76,
+      "net_profit_ntd": 436444.78,
+      "churners_captured": 4027,
+      "subscribers_targeted": 12914
+    },
+    {
+      "target_fraction": 0.23,
+      "gain_pct": 79.66,
+      "net_profit_ntd": 432640.54,
+      "churners_captured": 4073,
+      "subscribers_targeted": 13501
+    },
+    {
+      "target_fraction": 0.24,
+      "gain_pct": 80.5,
+      "net_profit_ntd": 428318.76,
+      "churners_captured": 4116,
+      "subscribers_targeted": 14088
+    },
+    {
+      "target_fraction": 0.25,
+      "gain_pct": 81.2,
+      "net_profit_ntd": 422789.36,
+      "churners_captured": 4152,
+      "subscribers_targeted": 14675
+    },
+    {
+      "target_fraction": 0.26,
+      "gain_pct": 81.85,
+      "net_profit_ntd": 416742.42,
+      "churners_captured": 4185,
+      "subscribers_targeted": 15262
+    },
+    {
+      "target_fraction": 0.27,
+      "gain_pct": 82.42,
+      "net_profit_ntd": 410005.4,
+      "churners_captured": 4214,
+      "subscribers_targeted": 15849
+    },
+    {
+      "target_fraction": 0.28,
+      "gain_pct": 83.04,
+      "net_profit_ntd": 403785.93,
+      "churners_captured": 4246,
+      "subscribers_targeted": 16436
+    },
+    {
+      "target_fraction": 0.29,
+      "gain_pct": 83.55,
+      "net_profit_ntd": 396531.37,
+      "churners_captured": 4272,
+      "subscribers_targeted": 17023
+    },
+    {
+      "target_fraction": 0.3,
+      "gain_pct": 84.29,
+      "net_profit_ntd": 391347.0,
+      "churners_captured": 4310,
+      "subscribers_targeted": 17610
+    },
+    {
+      "target_fraction": 0.31,
+      "gain_pct": 84.74,
+      "net_profit_ntd": 383574.89,
+      "churners_captured": 4333,
+      "subscribers_targeted": 18197
+    },
+    {
+      "target_fraction": 0.32,
+      "gain_pct": 85.31,
+      "net_profit_ntd": 376837.87,
+      "churners_captured": 4362,
+      "subscribers_targeted": 18784
+    },
+    {
+      "target_fraction": 0.33,
+      "gain_pct": 85.88,
+      "net_profit_ntd": 370100.86,
+      "churners_captured": 4391,
+      "subscribers_targeted": 19371
+    },
+    {
+      "target_fraction": 0.34,
+      "gain_pct": 86.35,
+      "net_profit_ntd": 362501.26,
+      "churners_captured": 4415,
+      "subscribers_targeted": 19958
+    },
+    {
+      "target_fraction": 0.35,
+      "gain_pct": 86.88,
+      "net_profit_ntd": 355419.21,
+      "churners_captured": 4442,
+      "subscribers_targeted": 20545
+    },
+    {
+      "target_fraction": 0.36,
+      "gain_pct": 87.23,
+      "net_profit_ntd": 346784.51,
+      "churners_captured": 4460,
+      "subscribers_targeted": 21132
+    },
+    {
+      "target_fraction": 0.37,
+      "gain_pct": 87.66,
+      "net_profit_ntd": 338839.88,
+      "churners_captured": 4482,
+      "subscribers_targeted": 21719
+    },
+    {
+      "target_fraction": 0.38,
+      "gain_pct": 88.17,
+      "net_profit_ntd": 331585.31,
+      "churners_captured": 4508,
+      "subscribers_targeted": 22306
+    },
+    {
+      "target_fraction": 0.39,
+      "gain_pct": 88.66,
+      "net_profit_ntd": 324158.23,
+      "churners_captured": 4533,
+      "subscribers_targeted": 22893
+    },
+    {
+      "target_fraction": 0.4,
+      "gain_pct": 89.07,
+      "net_profit_ntd": 316041.08,
+      "churners_captured": 4554,
+      "subscribers_targeted": 23480
+    },
+    {
+      "target_fraction": 0.41,
+      "gain_pct": 89.54,
+      "net_profit_ntd": 308441.48,
+      "churners_captured": 4578,
+      "subscribers_targeted": 24067
+    },
+    {
+      "target_fraction": 0.42,
+      "gain_pct": 90.03,
+      "net_profit_ntd": 301014.4,
+      "churners_captured": 4603,
+      "subscribers_targeted": 24654
+    },
+    {
+      "target_fraction": 0.43,
+      "gain_pct": 90.55,
+      "net_profit_ntd": 293932.35,
+      "churners_captured": 4630,
+      "subscribers_targeted": 25241
+    },
+    {
+      "target_fraction": 0.44,
+      "gain_pct": 90.85,
+      "net_profit_ntd": 284780.1,
+      "churners_captured": 4645,
+      "subscribers_targeted": 25828
+    },
+    {
+      "target_fraction": 0.45,
+      "gain_pct": 91.2,
+      "net_profit_ntd": 276145.4,
+      "churners_captured": 4663,
+      "subscribers_targeted": 26415
+    },
+    {
+      "target_fraction": 0.46,
+      "gain_pct": 91.57,
+      "net_profit_ntd": 267683.22,
+      "churners_captured": 4682,
+      "subscribers_targeted": 27002
+    },
+    {
+      "target_fraction": 0.47,
+      "gain_pct": 91.92,
+      "net_profit_ntd": 259048.52,
+      "churners_captured": 4700,
+      "subscribers_targeted": 27589
+    },
+    {
+      "target_fraction": 0.48,
+      "gain_pct": 92.29,
+      "net_profit_ntd": 250586.34,
+      "churners_captured": 4719,
+      "subscribers_targeted": 28176
+    },
+    {
+      "target_fraction": 0.49,
+      "gain_pct": 92.49,
+      "net_profit_ntd": 240571.5,
+      "churners_captured": 4729,
+      "subscribers_targeted": 28763
+    },
+    {
+      "target_fraction": 0.5,
+      "gain_pct": 92.82,
+      "net_profit_ntd": 231764.29,
+      "churners_captured": 4746,
+      "subscribers_targeted": 29350
+    },
+    {
+      "target_fraction": 0.51,
+      "gain_pct": 93.21,
+      "net_profit_ntd": 223474.62,
+      "churners_captured": 4766,
+      "subscribers_targeted": 29937
+    },
+    {
+      "target_fraction": 0.52,
+      "gain_pct": 93.53,
+      "net_profit_ntd": 214494.89,
+      "churners_captured": 4782,
+      "subscribers_targeted": 30524
+    },
+    {
+      "target_fraction": 0.53,
+      "gain_pct": 93.88,
+      "net_profit_ntd": 205860.19,
+      "churners_captured": 4800,
+      "subscribers_targeted": 31111
+    },
+    {
+      "target_fraction": 0.54,
+      "gain_pct": 94.15,
+      "net_profit_ntd": 196535.42,
+      "churners_captured": 4814,
+      "subscribers_targeted": 31698
+    },
+    {
+      "target_fraction": 0.55,
+      "gain_pct": 94.39,
+      "net_profit_ntd": 186865.62,
+      "churners_captured": 4826,
+      "subscribers_targeted": 32285
+    },
+    {
+      "target_fraction": 0.56,
+      "gain_pct": 94.7,
+      "net_profit_ntd": 177885.89,
+      "churners_captured": 4842,
+      "subscribers_targeted": 32872
+    },
+    {
+      "target_fraction": 0.57,
+      "gain_pct": 95.05,
+      "net_profit_ntd": 169251.19,
+      "churners_captured": 4860,
+      "subscribers_targeted": 33459
+    },
+    {
+      "target_fraction": 0.58,
+      "gain_pct": 95.23,
+      "net_profit_ntd": 159063.84,
+      "churners_captured": 4869,
+      "subscribers_targeted": 34046
+    },
+    {
+      "target_fraction": 0.59,
+      "gain_pct": 95.35,
+      "net_profit_ntd": 148358.94,
+      "churners_captured": 4875,
+      "subscribers_targeted": 34633
+    },
+    {
+      "target_fraction": 0.6,
+      "gain_pct": 95.6,
+      "net_profit_ntd": 138861.66,
+      "churners_captured": 4888,
+      "subscribers_targeted": 35220
+    },
+    {
+      "target_fraction": 0.61,
+      "gain_pct": 95.7,
+      "net_profit_ntd": 127984.24,
+      "churners_captured": 4893,
+      "subscribers_targeted": 35807
+    },
+    {
+      "target_fraction": 0.62,
+      "gain_pct": 95.8,
+      "net_profit_ntd": 117106.83,
+      "churners_captured": 4898,
+      "subscribers_targeted": 36394
+    },
+    {
+      "target_fraction": 0.63,
+      "gain_pct": 95.87,
+      "net_profit_ntd": 106056.89,
+      "churners_captured": 4902,
+      "subscribers_targeted": 36981
+    },
+    {
+      "target_fraction": 0.64,
+      "gain_pct": 96.13,
+      "net_profit_ntd": 96559.61,
+      "churners_captured": 4915,
+      "subscribers_targeted": 37568
+    },
+    {
+      "target_fraction": 0.65,
+      "gain_pct": 96.36,
+      "net_profit_ntd": 86889.81,
+      "churners_captured": 4927,
+      "subscribers_targeted": 38155
+    },
+    {
+      "target_fraction": 0.66,
+      "gain_pct": 96.5,
+      "net_profit_ntd": 76357.43,
+      "churners_captured": 4934,
+      "subscribers_targeted": 38742
+    },
+    {
+      "target_fraction": 0.67,
+      "gain_pct": 96.6,
+      "net_profit_ntd": 65480.01,
+      "churners_captured": 4939,
+      "subscribers_targeted": 39329
+    },
+    {
+      "target_fraction": 0.68,
+      "gain_pct": 96.79,
+      "net_profit_ntd": 55465.18,
+      "churners_captured": 4949,
+      "subscribers_targeted": 39916
+    },
+    {
+      "target_fraction": 0.69,
+      "gain_pct": 96.95,
+      "net_profit_ntd": 45105.31,
+      "churners_captured": 4957,
+      "subscribers_targeted": 40503
+    },
+    {
+      "target_fraction": 0.7,
+      "gain_pct": 97.03,
+      "net_profit_ntd": 34055.38,
+      "churners_captured": 4961,
+      "subscribers_targeted": 41090
+    },
+    {
+      "target_fraction": 0.71,
+      "gain_pct": 97.14,
+      "net_profit_ntd": 23350.48,
+      "churners_captured": 4967,
+      "subscribers_targeted": 41677
+    },
+    {
+      "target_fraction": 0.72,
+      "gain_pct": 97.3,
+      "net_profit_ntd": 12990.61,
+      "churners_captured": 4975,
+      "subscribers_targeted": 42264
+    },
+    {
+      "target_fraction": 0.73,
+      "gain_pct": 97.48,
+      "net_profit_ntd": 2803.26,
+      "churners_captured": 4984,
+      "subscribers_targeted": 42851
+    },
+    {
+      "target_fraction": 0.74,
+      "gain_pct": 97.59,
+      "net_profit_ntd": -7901.64,
+      "churners_captured": 4990,
+      "subscribers_targeted": 43438
+    },
+    {
+      "target_fraction": 0.75,
+      "gain_pct": 97.69,
+      "net_profit_ntd": -18779.05,
+      "churners_captured": 4995,
+      "subscribers_targeted": 44025
+    },
+    {
+      "target_fraction": 0.759,
+      "gain_pct": 97.75,
+      "net_profit_ntd": -30001.5,
+      "churners_captured": 4998,
+      "subscribers_targeted": 44612
+    },
+    {
+      "target_fraction": 0.769,
+      "gain_pct": 97.89,
+      "net_profit_ntd": -40533.89,
+      "churners_captured": 5005,
+      "subscribers_targeted": 45199
+    },
+    {
+      "target_fraction": 0.779,
+      "gain_pct": 98.01,
+      "net_profit_ntd": -51238.79,
+      "churners_captured": 5011,
+      "subscribers_targeted": 45786
+    },
+    {
+      "target_fraction": 0.789,
+      "gain_pct": 98.18,
+      "net_profit_ntd": -61426.14,
+      "churners_captured": 5020,
+      "subscribers_targeted": 46373
+    },
+    {
+      "target_fraction": 0.799,
+      "gain_pct": 98.32,
+      "net_profit_ntd": -71958.52,
+      "churners_captured": 5027,
+      "subscribers_targeted": 46960
+    },
+    {
+      "target_fraction": 0.809,
+      "gain_pct": 98.44,
+      "net_profit_ntd": -82663.42,
+      "churners_captured": 5033,
+      "subscribers_targeted": 47547
+    },
+    {
+      "target_fraction": 0.819,
+      "gain_pct": 98.57,
+      "net_profit_ntd": -93195.8,
+      "churners_captured": 5040,
+      "subscribers_targeted": 48134
+    },
+    {
+      "target_fraction": 0.829,
+      "gain_pct": 98.65,
+      "net_profit_ntd": -104245.73,
+      "churners_captured": 5044,
+      "subscribers_targeted": 48721
+    },
+    {
+      "target_fraction": 0.839,
+      "gain_pct": 98.77,
+      "net_profit_ntd": -114950.63,
+      "churners_captured": 5050,
+      "subscribers_targeted": 49308
+    },
+    {
+      "target_fraction": 0.849,
+      "gain_pct": 98.87,
+      "net_profit_ntd": -125828.05,
+      "churners_captured": 5055,
+      "subscribers_targeted": 49895
+    },
+    {
+      "target_fraction": 0.859,
+      "gain_pct": 98.98,
+      "net_profit_ntd": -136532.95,
+      "churners_captured": 5061,
+      "subscribers_targeted": 50482
+    },
+    {
+      "target_fraction": 0.869,
+      "gain_pct": 99.08,
+      "net_profit_ntd": -147410.37,
+      "churners_captured": 5066,
+      "subscribers_targeted": 51069
+    },
+    {
+      "target_fraction": 0.879,
+      "gain_pct": 99.28,
+      "net_profit_ntd": -157425.2,
+      "churners_captured": 5076,
+      "subscribers_targeted": 51656
+    },
+    {
+      "target_fraction": 0.889,
+      "gain_pct": 99.34,
+      "net_profit_ntd": -168647.65,
+      "churners_captured": 5079,
+      "subscribers_targeted": 52243
+    },
+    {
+      "target_fraction": 0.899,
+      "gain_pct": 99.34,
+      "net_profit_ntd": -180387.65,
+      "churners_captured": 5079,
+      "subscribers_targeted": 52830
+    },
+    {
+      "target_fraction": 0.909,
+      "gain_pct": 99.41,
+      "net_profit_ntd": -191437.58,
+      "churners_captured": 5083,
+      "subscribers_targeted": 53417
+    },
+    {
+      "target_fraction": 0.919,
+      "gain_pct": 99.51,
+      "net_profit_ntd": -202315.0,
+      "churners_captured": 5088,
+      "subscribers_targeted": 54004
+    },
+    {
+      "target_fraction": 0.929,
+      "gain_pct": 99.61,
+      "net_profit_ntd": -213192.42,
+      "churners_captured": 5093,
+      "subscribers_targeted": 54591
+    },
+    {
+      "target_fraction": 0.939,
+      "gain_pct": 99.67,
+      "net_profit_ntd": -224414.87,
+      "churners_captured": 5096,
+      "subscribers_targeted": 55178
+    },
+    {
+      "target_fraction": 0.949,
+      "gain_pct": 99.73,
+      "net_profit_ntd": -235637.32,
+      "churners_captured": 5099,
+      "subscribers_targeted": 55765
+    },
+    {
+      "target_fraction": 0.959,
+      "gain_pct": 99.78,
+      "net_profit_ntd": -246859.77,
+      "churners_captured": 5102,
+      "subscribers_targeted": 56352
+    },
+    {
+      "target_fraction": 0.969,
+      "gain_pct": 99.88,
+      "net_profit_ntd": -257737.18,
+      "churners_captured": 5107,
+      "subscribers_targeted": 56939
+    },
+    {
+      "target_fraction": 0.979,
+      "gain_pct": 99.9,
+      "net_profit_ntd": -269304.67,
+      "churners_captured": 5108,
+      "subscribers_targeted": 57526
+    },
+    {
+      "target_fraction": 0.989,
+      "gain_pct": 99.96,
+      "net_profit_ntd": -280527.12,
+      "churners_captured": 5111,
+      "subscribers_targeted": 58113
+    },
+    {
+      "target_fraction": 0.999,
+      "gain_pct": 99.98,
+      "net_profit_ntd": -292094.6,
+      "churners_captured": 5112,
+      "subscribers_targeted": 58700
+    }
+  ],
+  "optimal_point": {
+    "profitable": true,
+    "status_message": "Optimal target found",
+    "optimal_target_fraction": 0.2,
+    "optimal_target_pct": 20.0,
+    "subscribers_targeted": 11746,
+    "max_expected_profit_ntd": 441518.0,
+    "churners_saved": 784.2,
+    "lift_at_optimal": 3.83
+  }
+}

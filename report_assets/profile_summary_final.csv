@@ -1,0 +1,5 @@
+profile,user_count,user_pct,churn_count,churn_rate_pct,ci_lower_95,ci_upper_95,mean_active_days,mean_slope,mean_zero_months,cramers_v_vs_churn
+Inactive,23129,7.87,1322,5.72,5.42,6.02,0.0,0.0,6.0,0.0484
+Fast decay,94531,32.16,8801,9.31,9.13,9.5,16.13,-1.5611,0.29,0.0484
+Stable,97038,33.01,7439,7.67,7.5,7.84,14.21,-0.0438,0.94,0.0484
+Growing,79238,26.96,8183,10.33,10.12,10.54,13.86,1.9657,0.81,0.0484
